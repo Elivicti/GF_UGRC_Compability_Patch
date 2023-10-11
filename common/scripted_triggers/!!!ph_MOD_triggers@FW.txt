@@ -119,7 +119,7 @@ is_ELF_can_orbital_bombard_country_type = { always = no }
 ###_|久远|	####################################################################
 KZ_VOY_trgr_plnt_ASSEMBLY = { always = yes }
 KZ_VOY_trgr_plnt_CLONE = { always = no }
-KZ_VOY_can_assemble_magic_puppet = { always = no }
+KZ_VOY_can_assemble_magic_doll = { always = no }
 KZ_VOY_can_build_branch_offices = { always = no }
 is_KZ_VOY_organic_species = { always = no }
 KZ_VOY_can_unconditional_bombarment_country = { always = no }
