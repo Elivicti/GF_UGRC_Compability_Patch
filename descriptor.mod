@@ -2,5 +2,5 @@ version="1.0"
 tags={
 	"Fixes"
 }
-name="伞rules"
-supported_version="3.9.2"
+name="GF_UGRC_Compability_Patch"
+supported_version="3.9.*"
