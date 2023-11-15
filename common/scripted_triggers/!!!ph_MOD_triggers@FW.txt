@@ -245,4 +245,8 @@ THL_trgr_spcs_RULE_can_live_on_planet = { always = yes }
 
 ###_|GF|	####################################################################
 is_valid_GF_OGAS_subnet = { always = no }
+GF_can_build_doll_species = { always = no }
+GF_can_trade_robotic_leader = { always = no }
+GF_allow_doll_leaders = { always = no }
+GF_allow_doll_leaders_military = { always = no }
 

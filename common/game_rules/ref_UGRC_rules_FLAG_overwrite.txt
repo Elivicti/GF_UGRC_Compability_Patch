@@ -51,8 +51,6 @@ can_generate_leader_from_pop = {
 		has_trait = trait_AL_puffer
 		# 魔女
 		has_trait = trait_servitude
-		# GF
-		has_trait = GF_trait_doll
 	}
 	## +GF/魔女
 	OR = {
@@ -63,7 +61,7 @@ can_generate_leader_from_pop = {
 				has_authority = auth_machine_intelligence
 				is_mechanical_empire = yes
 				#	GF
-				has_technology = tech_mind_plus
+				GF_allow_doll_leaders = yes
 				#	魔女
 				has_technology = tech_dummy_leaders
 			}
@@ -104,11 +102,9 @@ can_generate_military_leader_from_pop = {
 				has_authority = auth_machine_intelligence
 				is_mechanical_empire = yes
 				# GF
-				has_technology = tech_mind_plus
+				GF_allow_doll_leaders_military = yes
 			}
 		}
-		# GF
-		has_trait = GF_trait_doll
 	}
 	OR = {
 		is_same_species = root

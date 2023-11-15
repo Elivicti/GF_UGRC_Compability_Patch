@@ -426,6 +426,11 @@ species_can_live_on_planet = {
 		}
 	}
 
+	# GF 神秘机械星球
+	NAND = {
+		root = { is_planet_class = pc_GF_sf_machine }
+		is_robotic = no
+	}
 	##	HFE
 	NAND = {
 		exists = root.controller
@@ -1387,10 +1392,7 @@ can_species_be_assembled = {
 			#	GF
 			else_if = { limit = { has_trait = GF_trait_doll }
 				root.owner = {
-					OR = {
-						has_authority = GF_auth_commonwealth
-						is_valid_GF_OGAS_subnet = yes
-					}
+					GF_can_build_doll_species = yes
 				}
 			}
 			#	thl
@@ -3083,6 +3085,8 @@ can_crossbreed_species = {
 		is_archetype = NANITES_CROP
 		# SC
 		UGRC_trgr_spcs_SC = no
+		# GF
+		has_trait = GF_trait_doll
 	}
 
 	root = {
@@ -3095,6 +3099,8 @@ can_crossbreed_species = {
 			is_archetype = NANITES_CROP
 			# SC
 			UGRC_trgr_spcs_SC = no
+			# GF
+			has_trait = GF_trait_doll
 		}
 	}
 }
@@ -3727,6 +3733,7 @@ can_trade_leader = {
 			has_specialist_subject_leader_trait = yes
 			has_specialist_subject_leader_trait_maid = yes	# rmaid
 			has_leader_flag = tradable_leader	# 多彩
+			GF_can_trade_robotic_leader = yes   # GF
 		}
 		is_heir = no
 	}
@@ -3766,20 +3773,6 @@ can_trade_leader = {
 					has_trait = trait_hive_mind
 					has_trait = trait_machine_unit
 				}
-			}
-		}
-		#	GF
-		AND = {
-			# 是机械领袖
-			species = { is_robotic = yes }
-			# 必须为少前政体附庸
-			ROOT = {
-				is_valid_GF_OGAS_subnet = yes
-			}
-			# 少前政体必须为宗主
-			FROM = {
-				is_overlord_to = ROOT
-				has_authority = GF_auth_commonwealth
 			}
 		}
 	}
